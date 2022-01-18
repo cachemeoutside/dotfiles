@@ -1,0 +1,22 @@
+AddKeysToAgent yes
+CanonicalizeHostname yes
+
+Host jump
+  HostName jump.library.ucla.edu
+  Port 31926
+  User avuong
+  IdentityFile /home/avuong/.ssh/id_rsa_ucla
+
+Host zero fd
+  HostName %h
+  User avuong
+  IdentityFile ~/.ssh/id_rsa_personal
+
+Host t-* p-* d-* s-*
+  HostName %h.library.ucla.edu
+  User avuong
+  IdentityFile ~/.ssh/id_rsa_ucla
+  ProxyJump jump
+
+Host *
+  ServerAliveInterval 240
