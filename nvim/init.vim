@@ -20,6 +20,7 @@ colorscheme sonokai
 inoremap <leader>d <C-R>=strftime("%Y-%m-%dT%H:%M")<CR>
 noremap <leader>g :Glow<CR>
 noremap <leader>s :Telescope
+nnoremap <silent> <Esc><Esc> :noh<CR> :call clearmatches()<CR>
 
 " Load lua
 lua require("plugins")
